@@ -8,7 +8,7 @@
 Summary:	Mod_suphp is a DSO module for the apache web server
 Name:		apache-%{mod_name1}
 Version:	0.6.1
-Release:	%mkrel 4
+Release:	%mkrel 5
 Group:		System/Servers
 License:	GPL
 URL:		http://www.suphp.org/
@@ -30,8 +30,6 @@ BuildRequires:	apache-devel >= 2.2.0
 BuildRequires:	file
 BuildRequires:	automake1.7
 Requires:	php-cgi
-Provides:	apache2-mod_suphp
-Obsoletes:	apache2-mod_suphp
 Epoch:		1
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
