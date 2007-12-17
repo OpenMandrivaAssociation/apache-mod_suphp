@@ -27,7 +27,6 @@ BuildRequires:	automake1.7
 Requires:	php-cgi
 Requires:	php-fcgi
 Epoch:		1
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 suPHP is a tool for executing PHP scripts with the permissions of their owners.
