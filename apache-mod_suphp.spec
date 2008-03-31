@@ -5,16 +5,16 @@
 
 Summary:	DSO module for the apache web server
 Name:		apache-%{mod_name}
-Version:	0.6.2
-Release:	%mkrel 3
+Version:	0.6.3
+Release:	%mkrel 1
 Group:		System/Servers
 License:	GPL
 URL:		http://www.suphp.org/
 Source0: 	http://www.suphp.org/download/suphp-%{version}.tar.gz
 Source1:	%{mod_conf}
 Source2:	suphp.conf
-Patch0:		mod_suphp-0.6.1-userdir.patch
-Patch1:		mod_suphp-0.6.1-AddHandler.patch
+Patch0:		mod_suphp-userdir.diff
+Patch1:		mod_suphp-AddHandler.diff
 Requires(pre): rpm-helper
 Requires(postun): rpm-helper
 Requires(pre):	apache-conf >= 2.2.0
@@ -43,8 +43,8 @@ This package provides support for php as of:
 %prep
 
 %setup -q -n suphp-%{version}
-%patch0 -p 1 -b .userdir
-%patch1 -p 1 -b .AddHandler
+%patch0 -p1 -b .userdir
+%patch1 -p0 -b .AddHandler
 
 cp %{SOURCE1} %{mod_conf}
 cp %{SOURCE2} suphp.conf
