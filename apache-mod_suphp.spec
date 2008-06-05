@@ -71,7 +71,7 @@ COMMON_CONFIGURE="--enable-checkpath \
     --with-apache-user=apache"
 
 
-%configure2_5x \
+%configure2_5x --localstatedir=/var/lib \
     $COMMON_CONFIGURE \
     --with-php=%{_bindir}/php-cgi \
     --with-logfile=/var/log/httpd/suphp_log
@@ -89,7 +89,7 @@ cp src/apache2/.libs/mod_suphp.so .
 cp src/suphp suphp
 make clean
 
-%configure2_5x \
+%configure2_5x --localstatedir=/var/lib \
     $COMMON_CONFIGURE \
     --with-php=%{_bindir}/php-fcgi \
     --with-logfile=/var/log/httpd/suphp_fcgi_log
