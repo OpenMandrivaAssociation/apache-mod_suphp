@@ -6,7 +6,7 @@
 Summary:	DSO module for the apache web server
 Name:		apache-%{mod_name}
 Version:	0.7.1
-Release:	%mkrel 4
+Release:	%mkrel 5
 Group:		System/Servers
 License:	GPL
 URL:		http://www.suphp.org/
@@ -21,7 +21,7 @@ Requires:	apache-conf >= 2.2.0
 Requires:	apache >= 2.2.0
 BuildRequires:	apache-devel >= 2.2.0
 BuildRequires:	file
-BuildRequires:	automake1.7
+BuildRequires:	automake
 Requires:	php-cgi
 Requires:	php-fcgi
 Epoch:		1
@@ -52,8 +52,8 @@ find . -type f|xargs file|grep 'text'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
 %build
 rm -f configure
 libtoolize --copy --force
-aclocal-1.7
-automake-1.7 --add-missing --copy
+aclocal
+automake --add-missing --copy
 autoconf
 
 COMMON_CONFIGURE="--enable-checkpath \
