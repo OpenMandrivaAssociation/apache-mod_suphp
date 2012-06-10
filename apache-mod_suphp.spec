@@ -6,7 +6,7 @@
 Summary:	DSO module for the apache web server
 Name:		apache-%{mod_name}
 Version:	0.7.1
-Release:	%mkrel 7
+Release:	8
 Group:		System/Servers
 License:	GPL
 URL:		http://www.suphp.org/
@@ -25,7 +25,6 @@ BuildRequires:	automake
 Requires:	php-cgi
 Requires:	php-fcgi
 Epoch:		1
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 suPHP is a tool for executing PHP scripts with the permissions of their owners.
@@ -59,7 +58,7 @@ autoconf
 COMMON_CONFIGURE="--enable-checkpath \
     --enable-checkuid \
     --enable-checkgid \
-    --with-apxs=%{_sbindir}/apxs \
+    --with-apxs=%{_bindir}/apxs \
     --with-apr=%{_bindir}/apr-1-config \
     --with-setid-mode=owner \
     --with-min-uid=500 \
@@ -73,7 +72,7 @@ COMMON_CONFIGURE="--enable-checkpath \
     --with-logfile=/var/log/httpd/suphp_log
 
 pushd src/apache2
-    %{_sbindir}/apxs \
+    %{_bindir}/apxs \
     -I. \
     -DHAVE_CONFIG_H \
     -DSUPHP_PATH_TO_SUPHP=\\\"%{_sbindir}/suphp\\\" \
@@ -95,7 +94,7 @@ perl -pi -e "s|suphp|suphp_fcgi|g" src/apache2/mod_suphp_fcgi.c
 perl -pi -e "s|suPHP|suPHP_fcgi|g" src/apache2/mod_suphp_fcgi.c
 
 pushd src/apache2
-    %{_sbindir}/apxs \
+    %{_bindir}/apxs \
     -I. \
     -DHAVE_CONFIG_H \
     -DSUPHP_PATH_TO_SUPHP=\\\"%{_sbindir}/suphp_fcgi\\\" \
