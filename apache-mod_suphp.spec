@@ -197,3 +197,116 @@ fi
 %attr(4755,root,root) %{_sbindir}/suphp_fcgi
 %attr(0755,root,root) %{_libdir}/apache-extramodules/mod_suphp.so
 %attr(0755,root,root) %{_libdir}/apache-extramodules/mod_suphp_fcgi.so
+
+
+%changelog
+* Sun Jun 10 2012 Bernhard Rosenkraenzer <bero@bero.eu> 1:0.7.1-8
++ Revision: 804360
+- Rebuild for apache 2.4.x
+
+* Sat Feb 11 2012 Oden Eriksson <oeriksson@mandriva.com> 1:0.7.1-7
++ Revision: 772770
+- rebuild
+
+* Tue May 24 2011 Oden Eriksson <oeriksson@mandriva.com> 1:0.7.1-6
++ Revision: 678424
+- mass rebuild
+
+* Mon Jan 03 2011 Oden Eriksson <oeriksson@mandriva.com> 1:0.7.1-5mdv2011.0
++ Revision: 627736
+- don't force the usage of automake1.7
+
+* Sun Oct 24 2010 Oden Eriksson <oeriksson@mandriva.com> 1:0.7.1-4mdv2011.0
++ Revision: 588070
+- rebuild
+
+* Mon Mar 08 2010 Oden Eriksson <oeriksson@mandriva.com> 1:0.7.1-3mdv2010.1
++ Revision: 516186
+- rebuilt for apache-2.2.15
+
+* Sat Aug 01 2009 Oden Eriksson <oeriksson@mandriva.com> 1:0.7.1-2mdv2010.0
++ Revision: 406658
+- rebuild
+
+* Sun Jun 21 2009 Oden Eriksson <oeriksson@mandriva.com> 1:0.7.1-1mdv2010.0
++ Revision: 387749
+- 0.7.1
+- nuke redundant patches
+
+* Tue Jan 06 2009 Oden Eriksson <oeriksson@mandriva.com> 1:0.6.3-4mdv2009.1
++ Revision: 326263
+- rebuild
+
+* Mon Jul 14 2008 Oden Eriksson <oeriksson@mandriva.com> 1:0.6.3-3mdv2009.0
++ Revision: 235108
+- rebuild
+
+* Thu Jun 05 2008 Oden Eriksson <oeriksson@mandriva.com> 1:0.6.3-2mdv2009.0
++ Revision: 215647
+- fix rebuild
+- hard code %%{_localstatedir}/lib to ease backports
+
+* Mon Mar 31 2008 Oden Eriksson <oeriksson@mandriva.com> 1:0.6.3-1mdv2009.0
++ Revision: 191190
+- 0.6.3 (Major security fixes)
+- rediffed P0,P1
+
+* Fri Mar 07 2008 Oden Eriksson <oeriksson@mandriva.com> 1:0.6.2-3mdv2008.1
++ Revision: 181923
+- rebuild
+
+* Mon Feb 18 2008 Thierry Vignaud <tv@mandriva.org> 1:0.6.2-2mdv2008.1
++ Revision: 170752
+- rebuild
+- fix "foobar is blabla" summary (=> "blabla") so that it looks nice in rpmdrake
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Sun Oct 14 2007 Oden Eriksson <oeriksson@mandriva.com> 1:0.6.2-1mdv2008.1
++ Revision: 98200
+- 0.6.2
+
+* Wed Oct 03 2007 Oden Eriksson <oeriksson@mandriva.com> 1:0.6.1-6mdv2008.0
++ Revision: 94907
+- remove the php4 hacks
+
+* Sat Sep 08 2007 Oden Eriksson <oeriksson@mandriva.com> 1:0.6.1-5mdv2008.0
++ Revision: 82682
+- rebuild
+
+
+* Sat Mar 10 2007 Oden Eriksson <oeriksson@mandriva.com> 0.6.1-4mdv2007.1
++ Revision: 140760
+- rebuild
+
+* Thu Nov 09 2006 Oden Eriksson <oeriksson@mandriva.com> 1:0.6.1-3mdv2007.1
++ Revision: 79521
+- Import apache-mod_suphp
+
+* Sun Jul 16 2006 Oden Eriksson <oeriksson@mandriva.com> 1:0.6.1-3mdk
+- add changes and patches from the package by Andreas Thienemann
+- split the different modules for each php version into its own sub
+  packages
+
+* Sun Apr 16 2006 Oden Eriksson <oeriksson@mandriva.com> 1:0.6.1-2mdk
+- fix build against apache-2.2.0 (P0)
+
+* Thu Dec 01 2005 Oden Eriksson <oeriksson@mandriva.com> 1:0.6.1-1mdk
+- 0.6.1 (Major bugfixes)
+
+* Mon Nov 28 2005 Oden Eriksson <oeriksson@mandriva.com> 1:0.5.2-1mdk
+- fix versioning
+
+* Sun Jul 31 2005 Oden Eriksson <oeriksson@mandriva.com> 2.0.54_0.5.2-2mdk
+- fix deps
+
+* Fri Jun 03 2005 Oden Eriksson <oeriksson@mandriva.com> 2.0.54_0.5.2-1mdk
+- rename the package
+- the conf.d directory is renamed to modules.d
+- use new rpm-4.4.x pre,post magic
+
+* Mon Apr 04 2005 Oden Eriksson <oeriksson@mandrakesoft.com> 2.0.53_0.5.2-1mdk
+- initial package
+
