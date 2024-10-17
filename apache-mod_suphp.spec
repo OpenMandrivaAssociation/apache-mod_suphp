@@ -9,7 +9,7 @@ Version:	0.7.1
 Release:	9
 Group:		System/Servers
 License:	GPL
-URL:		http://www.suphp.org/
+URL:		https://www.suphp.org/
 Source0: 	http://www.suphp.org/download/suphp-%{version}.tar.gz
 Source1:	%{mod_conf}
 Source2:	suphp.conf
